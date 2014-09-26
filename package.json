@@ -1,0 +1,53 @@
+{
+  "name": "arr-diff",
+  "description": "Return an array with only the unique values present in all given arrays using strict equality for comparisons.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/arr-diff",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/arr-diff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/arr-diff/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonschlinkert/arr-diff/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "^4.0.4",
+    "verb": ">= 0.2.6",
+    "verb-tag-jscomments": ">= 0.2.0"
+  },
+  "keywords": [
+    "recurse",
+    "recursive",
+    "recursively",
+    "arr",
+    "array",
+    "util",
+    "utils",
+    "utility",
+    "javascript",
+    "node.js",
+    "flat",
+    "flatten"
+  ],
+  "dependencies": {
+    "array-slice": "^0.2.0"
+  }
+}
