@@ -13,5 +13,6 @@ var diff = require('./');
 describe('diff', function () {
   it('should diff array:', function () {
     diff(['a', 'b', 'c'], ['b', 'c', 'e']).should.eql(['a']);
+    diff(['foo', 'b', 'c', 'e', 'bar'], ['b', 'foo', 'e']).should.eql(['bar', 'c']);
   });
 });

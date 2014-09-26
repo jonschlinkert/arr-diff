@@ -34,20 +34,14 @@
     "verb-tag-jscomments": ">= 0.2.0"
   },
   "keywords": [
-    "recurse",
-    "recursive",
-    "recursively",
     "arr",
     "array",
-    "util",
-    "utils",
-    "utility",
+    "diff",
+    "difference",
     "javascript",
     "node.js",
-    "flat",
-    "flatten"
-  ],
-  "dependencies": {
-    "array-slice": "^0.2.0"
-  }
+    "util",
+    "utility",
+    "utils"
+  ]
 }
