@@ -23,7 +23,7 @@
  * @return {Array}
  */
 
-module.exports = function difference(a, b) {
+module.exports = function diff(a, b) {
   var alen = a.length - 1;
   var blen = b.length;
 
@@ -45,4 +45,3 @@ module.exports = function difference(a, b) {
 
   return arr;
 };
-
