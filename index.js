@@ -34,14 +34,13 @@ module.exports = function diff(a, b) {
     return a;
   }
 
+  var len = a.length;
   var arr = [];
 
-  for (var i = alen; i >= 0; i--) {
-    var key = a[i];
-    if (b.indexOf(key) === -1) {
-      arr.push(key);
+  while (len--) {
+    if (b.indexOf(a[len]) === -1) {
+      arr.push(a[len]);
     }
   }
-
   return arr;
 };
