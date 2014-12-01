@@ -8,6 +8,12 @@
 'use strict';
 
 /**
+ * Expose `diff`
+ */
+
+module.exports = diff;
+
+/**
  * Return the difference between two arrays.
  *
  * ```js
@@ -21,9 +27,10 @@
  * @param  {Array} `a`
  * @param  {Array} `b`
  * @return {Array}
+ * @api public
  */
 
-module.exports = function diff(a, b) {
+function diff(a, b) {
   var alen = a.length - 1;
   var blen = b.length;
 
@@ -43,4 +50,4 @@ module.exports = function diff(a, b) {
     }
   }
   return arr;
-};
+}
