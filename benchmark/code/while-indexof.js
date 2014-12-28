@@ -3,11 +3,13 @@
 module.exports = function diff(a, b) {
   var len = a.length;
   var arr = [];
+  var i = 0;
 
   while (len--) {
-    if (b.indexOf(a[len]) === -1) {
-      arr.push(a[len]);
+    if (b.indexOf(a[i]) === -1) {
+      arr.push(a[i]);
     }
+    i++;
   }
   return arr;
 };

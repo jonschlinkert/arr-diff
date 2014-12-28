@@ -6,7 +6,7 @@ module.exports = function diff(a, b) {
 
   while (len--) {
     if (b.indexOf(a[len]) === -1) {
-      arr.push(a[len]);
+      arr.unshift(a[len]);
     }
   }
   return arr;
