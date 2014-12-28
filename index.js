@@ -7,6 +7,8 @@
 
 'use strict';
 
+var slice = require('array-slice');
+
 /**
  * Expose `diff`
  */
@@ -14,13 +16,16 @@
 module.exports = diff;
 
 /**
- * Return the difference between two arrays.
+ * Return the difference between the first array and
+ * additional arrays.
  *
  * ```js
+ * var diff = require('{%= name %}');
+ *
  * var a = ['a', 'b', 'c', 'd'];
  * var b = ['b', 'c'];
  *
- * console.log(difference(a, b))
+ * console.log(diff(a, b))
  * //=> ['a', 'd']
  * ```
  *
@@ -30,23 +35,24 @@ module.exports = diff;
  * @api public
  */
 
-function diff(a, b) {
-  var alen = a.length - 1;
-  var blen = b.length;
+function diff(a, b, c) {
+  var len = a.length;
+  var arr = [];
+  var rest;
 
-  if (alen === 0) {
-    return [];
-  }
-  if (blen === 0) {
+  if (!b) {
     return a;
   }
 
-  var len = a.length;
-  var arr = [];
+  if (!c) {
+    rest = b;
+  } else {
+    rest = [].concat.apply([], slice(arguments, 1));
+  }
 
   while (len--) {
-    if (b.indexOf(a[len]) === -1) {
-      arr.push(a[len]);
+    if (rest.indexOf(a[len]) === -1) {
+      arr.unshift(a[len]);
     }
   }
   return arr;
