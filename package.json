@@ -1,7 +1,7 @@
 {
   "name": "arr-diff",
-  "description": "Return an array with only the unique values present in all given arrays using strict equality for comparisons.",
-  "version": "0.2.1",
+  "description": "Returns an array with only the unique values from the first array, by excluding all values from additional arrays using strict equality for comparisons.",
+  "version": "1.0.1",
   "homepage": "https://github.com/jonschlinkert/arr-diff",
   "author": {
     "name": "Jon Schlinkert",
@@ -14,12 +14,10 @@
   "bugs": {
     "url": "https://github.com/jonschlinkert/arr-diff/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/arr-diff/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/arr-diff/blob/master/LICENSE-MIT"
+  },
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
@@ -27,8 +25,13 @@
   "scripts": {
     "test": "mocha -R spec"
   },
+  "dependencies": {
+    "array-slice": "^0.2.2"
+  },
   "devDependencies": {
+    "array-differ": "^1.0.0",
     "benchmarked": "^0.1.3",
+    "chalk": "^0.5.1",
     "mocha": "*",
     "should": "^4.0.4"
   },
@@ -36,11 +39,7 @@
     "arr",
     "array",
     "diff",
-    "difference",
-    "javascript",
-    "node.js",
-    "util",
-    "utility",
-    "utils"
+    "differ",
+    "difference"
   ]
 }
