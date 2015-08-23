@@ -1,13 +1,7 @@
-/*!
- * arr-diff <https://github.com/jonschlinkert/arr-diff>
- *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT License
- */
-
 'use strict';
 
-var should = require('should');
+/* deps: mocha */
+require('should');
 var diff = require('./');
 
 describe('diff', function () {
@@ -34,8 +28,11 @@ describe('diff', function () {
     diff(['a', 'b', 'c'], []).should.eql(['a', 'b', 'c']);
   });
 
-  it('should return the first array if the second array is null or undefined:', function () {
-    diff(['a', 'b', 'c'], null).should.eql(['a', 'b', 'c']);
+  it('should return the first array if no other args are passed:', function () {
     diff(['a', 'b', 'c']).should.eql(['a', 'b', 'c']);
+  });
+
+  it('should iterate over sparse arguments:', function () {
+    diff(['a', 'b', 'c'], null, ['a', 'b']).should.eql(['c']);
   });
 });
