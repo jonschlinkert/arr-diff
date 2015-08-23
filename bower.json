@@ -1,13 +1,34 @@
 {
   "name": "arr-diff",
-  "version": "1.0.1",
-  "main": [
-    "index.js"
-  ],
+  "description": "Returns an array with only the unique values from the first array, by excluding all values from additional arrays using strict equality for comparisons.",
+  "repository": "jonschlinkert/arr-diff",
+  "license": "MIT",
+  "homepage": "https://github.com/jonschlinkert/arr-diff",
   "authors": [
     {
       "name": "Jon Schlinkert",
       "homepage": "https://github.com/jonschlinkert"
     }
+  ],
+  "main": [
+    "index.js"
+  ],
+  "dependencies": {
+    "arr-flatten": "^1.0.1",
+    "array-slice": "^0.2.3"
+  },
+  "devDependencies": {
+    "array-differ": "^1.0.0",
+    "benchmarked": "^0.1.4",
+    "chalk": "^1.1.1",
+    "mocha": "^2.2.5",
+    "should": "^7.0.4"
+  },
+  "keywords": [
+    "arr",
+    "array",
+    "diff",
+    "differ",
+    "difference"
   ]
 }
