@@ -1,6 +1,6 @@
 'use strict';
 
-/* deps: mocha */
+require('mocha');
 require('should');
 var diff = require('./');
 

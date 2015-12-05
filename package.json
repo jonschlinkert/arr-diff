@@ -23,8 +23,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "arr-flatten": "^1.0.1",
-    "array-slice": "^0.2.3"
+    "arr-flatten": "^1.0.1"
   },
   "devDependencies": {
     "array-differ": "^1.0.0",
