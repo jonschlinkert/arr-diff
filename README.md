@@ -1,4 +1,4 @@
-# arr-diff [![NPM version](https://img.shields.io/npm/v/arr-diff.svg)](https://www.npmjs.com/package/arr-diff) [![Build Status](https://img.shields.io/travis/jonschlinkert/base.svg)](https://travis-ci.org/jonschlinkert/base)
+# arr-diff [![NPM version](https://img.shields.io/npm/v/arr-diff.svg)](https://www.npmjs.com/package/arr-diff) [![Build Status](https://img.shields.io/travis/jonschlinkert/arr-diff.svg)](https://travis-ci.org/jonschlinkert/arr-diff)
 
 > Returns an array with only the unique values from the first array, by excluding all values from additional arrays using strict equality for comparisons.
 
