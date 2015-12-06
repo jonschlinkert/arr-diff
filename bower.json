@@ -14,11 +14,11 @@
     "index.js"
   ],
   "dependencies": {
-    "arr-flatten": "^1.0.1",
-    "array-slice": "^0.2.3"
+    "arr-flatten": "^1.0.1"
   },
   "devDependencies": {
     "array-differ": "^1.0.0",
+    "array-slice": "^0.2.3",
     "benchmarked": "^0.1.4",
     "chalk": "^1.1.1",
     "mocha": "^2.2.5",
