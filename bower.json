@@ -5,10 +5,7 @@
   "license": "MIT",
   "homepage": "https://github.com/jonschlinkert/arr-diff",
   "authors": [
-    {
-      "name": "Jon Schlinkert",
-      "homepage": "https://github.com/jonschlinkert"
-    }
+    "Jon Schlinkert (https://github.com/jonschlinkert)"
   ],
   "main": [
     "index.js"
@@ -17,16 +14,20 @@
     "arr-flatten": "^1.0.1"
   },
   "devDependencies": {
+    "ansi-bold": "^0.1.1",
     "array-differ": "^1.0.0",
     "array-slice": "^0.2.3",
-    "benchmarked": "^0.1.4",
-    "chalk": "^1.1.1",
-    "mocha": "^2.2.5",
-    "should": "^7.0.4"
+    "benchmarked": "^0.2.4",
+    "gulp-format-md": "^0.1.9",
+    "minimist": "^1.2.0",
+    "mocha": "^2.4.5",
+    "should": "^8.3.1"
   },
   "keywords": [
     "arr",
     "array",
+    "array differ",
+    "array-differ",
     "diff",
     "differ",
     "difference"

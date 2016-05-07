@@ -23,16 +23,18 @@
     "arr-flatten": "^1.0.1"
   },
   "devDependencies": {
+    "ansi-bold": "^0.1.1",
     "array-differ": "^1.0.0",
-    "array-slice": "^0.2.3",
-    "benchmarked": "^0.1.4",
-    "chalk": "^1.1.1",
-    "mocha": "*",
-    "should": "*"
+    "benchmarked": "^0.2.4",
+    "gulp-format-md": "^0.1.9",
+    "minimist": "^1.2.0",
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "arr",
     "array",
+    "array differ",
+    "array-differ",
     "diff",
     "differ",
     "difference"
@@ -44,6 +46,21 @@
         "array-filter",
         "array-intersection"
       ]
-    }
+    },
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "verb",
+      "array-differ"
+    ]
   }
 }
