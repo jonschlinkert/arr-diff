@@ -3,14 +3,10 @@
 module.exports = function diff(arr, arrays) {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
 
-  var len = arr.length;
-  var result = [];
-
-  for (var i = 0; i < len; i++) {
-    var ele = arr[i];
+  return arr.reduce(function(acc, ele, i) {
     if (arrays.indexOf(ele) === -1) {
-      result.push(ele);
+      acc.push(ele);
     }
-  }
-  return result;
+    return acc;
+  }, []);
 };

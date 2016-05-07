@@ -1,7 +1,5 @@
 'use strict';
 
-var slice = require('array-slice');
-
 module.exports = function diff(a, b, c) {
   var len = a.length;
   var arr = [];
@@ -14,12 +12,13 @@ module.exports = function diff(a, b, c) {
   if (!c) {
     rest = b;
   } else {
-    rest = [].concat.apply([], slice(arguments, 1));
+    rest = [].concat.apply([], [].slice.call(arguments, 1));
   }
 
   while (len--) {
-    if (rest.indexOf(a[len]) === -1) {
-      arr.unshift(a[len]);
+    var ele = arr[len];
+    if (rest.indexOf(ele) === -1) {
+      arr.unshift(ele);
     }
   }
   return arr;

@@ -6,8 +6,8 @@ module.exports = function diff(arr, arrays) {
   var len = arr.length;
   var result = [];
 
-  for (var i = 0; i < len; i++) {
-    var ele = arr[i];
+  while (len--) {
+    var ele = arr[len];
     if (arrays.indexOf(ele) === -1) {
       result.push(ele);
     }

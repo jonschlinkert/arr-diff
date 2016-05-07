@@ -1,7 +1,8 @@
 'use strict';
 
-module.exports = function diff(a, b) {
-  return a.filter(function (value) {
-    return (b.indexOf(value) === -1);
+module.exports = function diff(arr, arrays) {
+  arrays = [].concat.apply([], [].slice.call(arguments, 1));
+  return arr.filter(function(ele) {
+    return arrays.indexOf(ele) === -1;
   });
 };

@@ -1,13 +1,16 @@
 'use strict';
 
-var diff = module.exports = function diff(a, b) {
-  var arr = [];
+module.exports = function diff(arr, arrays) {
+  arrays = [].concat.apply([], [].slice.call(arguments, 1));
 
-  for (var i = a.length - 1; i >= 0; i--) {
-    var key = a[i];
-    if (-1 === b.indexOf(key)) {
-      arr.push(key);
+  var len = arr.length - 1;
+  var result = [];
+
+  for (var i = len; i >= 0; i--) {
+    var ele = arr[i];
+    if (arrays.indexOf(ele) === -1) {
+      result.push(ele);
     }
   }
-  return arr;
+  return result;
 };
