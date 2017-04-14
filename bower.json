@@ -10,18 +10,13 @@
   "main": [
     "index.js"
   ],
-  "dependencies": {
-    "arr-flatten": "^1.0.1"
-  },
   "devDependencies": {
     "ansi-bold": "^0.1.1",
     "array-differ": "^1.0.0",
-    "array-slice": "^0.2.3",
     "benchmarked": "^0.2.4",
     "gulp-format-md": "^0.1.9",
     "minimist": "^1.2.0",
-    "mocha": "^2.4.5",
-    "should": "^8.3.1"
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "arr",
@@ -31,5 +26,25 @@
     "diff",
     "differ",
     "difference"
+  ],
+  "version": "3.0.0",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/arr-diff/issues"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "arr-flatten": "^1.0.1"
+  },
+  "ignore": [
+    "actual",
+    "bower_components",
+    "fixtures",
+    "node_modules",
+    "temp",
+    "test",
+    "test.js",
+    "tmp"
   ]
 }
