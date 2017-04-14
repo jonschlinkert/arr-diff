@@ -12,6 +12,7 @@
   ],
   "devDependencies": {
     "ansi-bold": "^0.1.1",
+    "arr-flatten": "^1.0.1",
     "array-differ": "^1.0.0",
     "benchmarked": "^0.2.4",
     "gulp-format-md": "^0.1.9",
@@ -27,16 +28,13 @@
     "differ",
     "difference"
   ],
-  "version": "3.0.0",
+  "version": "4.0.0",
   "bugs": {
     "url": "https://github.com/jonschlinkert/arr-diff/issues"
   },
   "files": [
     "index.js"
   ],
-  "dependencies": {
-    "arr-flatten": "^1.0.1"
-  },
   "ignore": [
     "actual",
     "bower_components",
@@ -46,5 +44,9 @@
     "test",
     "test.js",
     "tmp"
+  ],
+  "contributors": [
+    "Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)",
+    "Paul Miller <paul+gh@paulmillr.com> (paulmillr.com)"
   ]
 }
