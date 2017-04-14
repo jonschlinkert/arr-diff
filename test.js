@@ -10,10 +10,18 @@ describe('diff', function() {
     assert.deepEqual(diff(['x', 'b', 'c', 'e', 'y'], ['b', 'x', 'e']), ['c', 'y']);
     assert.deepEqual(diff(['x', 'x'], ['a', 'b', 'c']), ['x', 'x']);
     assert.deepEqual(diff(['x'], ['a', 'b', 'c']), ['x']);
+    assert.deepEqual(diff(['x', 'b', 'b', 'b', 'c', 'e', 'y'], ['x', 'e']), ['b', 'b', 'b', 'c', 'y']);
   });
 
-  it('should include duplicates:', function() {
-    assert.deepEqual(diff(['x', 'b', 'b', 'b', 'c', 'e', 'y'], ['x', 'e']), ['b', 'b', 'b', 'c', 'y']);
+  it('should remove all occurences of an element:', function() {
+    assert.deepEqual(diff(['a', 'b', 'b', 'b', 'b'], ['b']), ['a']);
+  });
+
+  it('should not modify the input array:', function() {
+    var arr = ['x', 'b', 'b', 'b', 'c', 'e', 'y'];
+    var init = arr.slice();
+    diff(arr, ['x', 'e']);
+    assert.deepEqual(arr, init);;
   });
 
   it('should diff elements from multiple arrays:', function() {

@@ -4,6 +4,10 @@
   "version": "3.0.0",
   "homepage": "https://github.com/jonschlinkert/arr-diff",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Jon Schlinkert <jon.schlinkert@sellside.com> (http://twitter.com/jonschlinkert)",
+    "Paul Miller <paul+gh@paulmillr.com> (paulmillr.com)"
+  ],
   "repository": "jonschlinkert/arr-diff",
   "bugs": {
     "url": "https://github.com/jonschlinkert/arr-diff/issues"
@@ -19,11 +23,10 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {
-    "arr-flatten": "^1.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ansi-bold": "^0.1.1",
+    "arr-flatten": "^1.0.1",
     "array-differ": "^1.0.0",
     "benchmarked": "^0.2.4",
     "gulp-format-md": "^0.1.9",
@@ -40,13 +43,6 @@
     "difference"
   ],
   "verb": {
-    "related": {
-      "list": [
-        "arr-flatten",
-        "array-filter",
-        "array-intersection"
-      ]
-    },
     "toc": false,
     "layout": "default",
     "tasks": [
@@ -55,12 +51,19 @@
     "plugins": [
       "gulp-format-md"
     ],
-    "lint": {
-      "reflinks": true
+    "related": {
+      "list": [
+        "arr-flatten",
+        "array-filter",
+        "array-intersection"
+      ]
     },
     "reflinks": [
-      "verb",
-      "array-differ"
-    ]
+      "array-differ",
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
