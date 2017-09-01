@@ -13,7 +13,7 @@ describe('diff', function() {
     assert.deepEqual(diff(['x', 'b', 'b', 'b', 'c', 'e', 'y'], ['x', 'e']), ['b', 'b', 'b', 'c', 'y']);
   });
 
-  it('should remove all occurences of an element:', function() {
+  it('should remove all occurrences of an element:', function() {
     assert.deepEqual(diff(['a', 'b', 'b', 'b', 'b'], ['b']), ['a']);
   });
 
