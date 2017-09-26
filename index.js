@@ -11,7 +11,7 @@ module.exports = function diff(arr/*, arrays*/) {
   if(!Array.isArray(arr)) return arr;
   
   var len = arguments.length,
-      ldx = 0;
+  var ldx = 0;
   while (++idx < len) {
     arr = diffArray(arr, arguments[idx]);
   }
@@ -23,10 +23,10 @@ function diffArray(one, two) {
     return one.slice();
   }
   
-  var olen = one.length,
-      tlen = two.length,
-      idx = -1,
-      arr = [];
+  var olen = one.length;
+  var tlen = two.length;
+  var idx = -1;
+  var arr = [];
 
   while (++idx < olen) {
     var ele = one[idx];
