@@ -8,8 +8,10 @@
 'use strict';
 
 module.exports = function diff(arr/*, arrays*/) {
-  var len = arguments.length;
-  var idx = 0;
+  if(!Array.isArray(arr)) return arr;
+  
+  var len = arguments.length,
+      ldx = 0;
   while (++idx < len) {
     arr = diffArray(arr, arguments[idx]);
   }
@@ -20,11 +22,11 @@ function diffArray(one, two) {
   if (!Array.isArray(two)) {
     return one.slice();
   }
-
-  var tlen = two.length
-  var olen = one.length;
-  var idx = -1;
-  var arr = [];
+  
+  var olen = one.length,
+      tlen = two.length,
+      idx = -1,
+      arr = [];
 
   while (++idx < olen) {
     var ele = one[idx];
