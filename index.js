@@ -40,7 +40,7 @@ function diffArray(one, two) {
     }
 
     if (hasEle === false) {
-      arr.push(ele);
+      arr.push(JSON.parse(ele));
     }
   }
   return arr;
