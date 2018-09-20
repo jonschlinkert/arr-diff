@@ -27,11 +27,11 @@ function diffArray(one, two) {
   var arr = [];
 
   while (++idx < olen) {
-    var ele = one[idx];
+    var ele = JSON.stringify(one[idx]);
 
     var hasEle = false;
     for (var i = 0; i < tlen; i++) {
-      var val = two[i];
+      var val = JSON.stringify(two[i]);
 
       if (ele === val) {
         hasEle = true;
