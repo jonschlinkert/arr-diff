@@ -15,9 +15,11 @@
   "license": "MIT",
   "files": [
     "index.js",
+    "index.esm.js",
     "index.d.ts"
   ],
   "main": "index.js",
+  "module": "index.esm.js",
   "types": "index.d.ts",
   "engines": {
     "node": ">=0.10.0"
