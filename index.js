@@ -10,7 +10,7 @@
 module.exports = function diff(arr/*, arrays*/) {
   if(!Array.isArray(arr)) return arr;
   
-  var len = arguments.length,
+  var len = arguments.length;
   var ldx = 0;
   while (++idx < len) {
     arr = diffArray(arr, arguments[idx]);
