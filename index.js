@@ -1,47 +1,44 @@
-/*!
- * arr-diff <https://github.com/jonschlinkert/arr-diff>
- *
- * Copyright (c) 2014-2017, Jon Schlinkert.
- * Released under the MIT License.
- */
-
 'use strict';
 
-module.exports = function diff(arr/*, arrays*/) {
-  var len = arguments.length;
-  var idx = 0;
-  while (++idx < len) {
-    arr = diffArray(arr, arguments[idx]);
+function performArrayDiff(arrayOne, arrayTwo) {
+  /* yes we need to make sure that the second argument in this is always an array */
+  if (!Array.isArray(arrayTwo)) {
+    return arrayOne.slice(0);
   }
-  return arr;
-};
+  else {
+    /* take a clone so that you do not affect the original values */
+    let sourceArray = arrayOne.slice(0);
+    let diffArray = arrayTwo.slice(0);
 
-function diffArray(one, two) {
-  if (!Array.isArray(two)) {
-    return one.slice();
-  }
+    let resultArray = [];
 
-  var tlen = two.length
-  var olen = one.length;
-  var idx = -1;
-  var arr = [];
+    sourceArray.forEach((value) => {
+      let foundIndex = diffArray.findIndex((element) => {
+        return element === value;
+      });
 
-  while (++idx < olen) {
-    var ele = one[idx];
-
-    var hasEle = false;
-    for (var i = 0; i < tlen; i++) {
-      var val = two[i];
-
-      if (ele === val) {
-        hasEle = true;
-        break;
+      if (foundIndex === -1) {
+        resultArray.push(value);
       }
-    }
+    });
 
-    if (hasEle === false) {
-      arr.push(ele);
-    }
+    return resultArray;
   }
-  return arr;
+}
+
+module.exports = (array) {
+  if (!Array.isArray(array)) {
+    throw new Error("First Argument: 'array' needs to always be an array!");
+  }
+  else {
+    let argsLength = arguments.length;
+    let index = 1;
+
+    /* iteration */
+    while (index < argsLength) {
+      array = performArrayDiff(array, arguments[index]);
+      ++index;
+    }
+    return array;
+  }
 }
